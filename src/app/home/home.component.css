@@ -1,0 +1,8 @@
+body {
+   background-image: url('../images/img1.jpg');
+/* Pour centrer l'image dans l'élément */
+   background-size: cover; /* Pour que l'image couvre entièrement l'élément */
+   opacity: 5; 
+  } 
+ 
+  

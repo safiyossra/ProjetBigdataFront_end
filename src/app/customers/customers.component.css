@@ -1,0 +1,64 @@
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Maintains spacing between the logo and navigation items */
+    align-items: center; /* Vertically centers the items within the navbar */
+    padding: 7px; /* Provides padding around the navbar content */
+    color: white; /* Sets text color for the entire navbar */
+    background-color: #8faadb; /* Dark background for better visibility of white text */
+    margin-top: -7px;
+    margin-bottom: 5px;
+    margin-left: -10px;
+  }
+  .navbar .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: white; 
+  }
+  
+  .navbar ul {
+      list-style: none; 
+      display: flex; 
+      margin-left: 20px; 
+      margin-right: 50px;
+      
+  
+  }
+  
+  .navbar ul li a {
+      text-decoration: none; 
+      color: white; 
+      padding: 0 1rem; 
+  }
+  
+  .navbar ul li {
+    margin: 0 20px; 
+  }
+  
+  
+  .navbar .login-btn {
+      padding: 1rem 2rem; 
+      border: 1px solid white; 
+      background: none; 
+      color: white; 
+      cursor: pointer; 
+      transition: background-color 0.3s, color 0.3s; 
+      width: 200px;
+  }
+  
+  .navbar .login-btn:hover {
+      background-color: white;
+      color: #333;
+  }
+  
+  body {
+    margin: 0;
+    background-size: cover; 
+    background-position: center;  
+    background-repeat: no-repeat; 
+     /* background-color: rgb(167, 218, 252); */
+  
+  }

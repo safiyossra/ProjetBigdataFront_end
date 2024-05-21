@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>Désabonnements</title>
+<head>
+
+</head>
+
+<body>
+<div class="navbar">
+ <div class="logo" style="font-size: 30px; margin-left: 5px;">
+    <i class="fas fa-tachometer-alt"></i> Dashboard
+</div>
+  <ul>
+
+    <li><a href="/home">HOME</a></li>
+    <li><a href="/Graph">GRAPH</a></li>
+    <li><a href="/predict">PREDICT</a></li>
+
+
+
+    <li><a href="/customers">CUSTOMERS</a></li>
+  <li><a href="/contact">CONTACTS</a></li>
+  
+
+  </ul>
+  <button class="login-btn">Désabonnements</button>
+</div>
+
+<!-- src/app/components/customer-form/customer-form.component.html -->
+<div *ngIf="formVisible">
+  <form class="form-container" (ngSubmit)="onSubmit($event)">
+  <div class="form-column">
+    <div class="form-row">
+      <label for="vmailMessages">Nombre de messages vocaux</label>
+      <input type="number" id="vmailMessages" name="numberVmailMessages" [(ngModel)]="model.numberVmailMessages">
+    </div>
+    <div class="form-row">
+      <label for="dayMinutes">Total des minutes de jour</label>
+      <input type="text" id="dayMinutes" name="totalDayMinutes" [(ngModel)]="model.totalDayMinutes">
+    </div>
+    <div class="form-row">
+      <label for="dayCalls">Total des appels de jour</label>
+      <input type="number" id="dayCalls" name="totalDayCalls" [(ngModel)]="model.totalDayCalls">
+    </div>
+    <div class="form-row">
+      <label for="dayCharge">Total des charges de jour</label>
+      <input type="text" id="dayCharge" name="totalDayCharge" [(ngModel)]="model.totalDayCharge">
+    </div>
+  </div>
+  <div class="form-column">
+    <div class="form-row">
+      <label for="eveMinutes">Total des minutes de soirée</label>
+      <input type="text" id="eveMinutes" name="totalEveMinutes" [(ngModel)]="model.totalEveMinutes">
+    </div>
+    <div class="form-row">
+      <label for="eveCharge">Total des charges de soirée</label>
+      <input type="text" id="eveCharge" name="totalEveCharge" [(ngModel)]="model.totalEveCharge">
+    </div>
+    <div class="form-row">
+      <label for="eveCalls">Total des appels de soirée</label>
+      <input type="number" id="eveCalls" name="totalEveCalls" [(ngModel)]="model.totalEveCalls">
+    </div>
+  </div>
+  <div class="form-column">
+    <div class="form-row">
+      <label for="nightMinutes">Total des minutes de nuit</label>
+      <input type="text" id="nightMinutes" name="totalNightMinutes" [(ngModel)]="model.totalNightMinutes">
+    </div>
+    <div class="form-row">
+      <label for="nightCalls">Total des appels de nuit</label>
+      <input type="number" id="nightCalls" name="totalNightCalls" [(ngModel)]="model.totalNightCalls">
+    </div>
+    <div class="form-row">
+      <label for="nightCharge">Total des charges de nuit</label>
+      <input type="text" id="nightCharge" name="totalNightCharge" [(ngModel)]="model.totalNightCharge">
+    </div>
+  </div>
+  <div class="form-column">
+    <div class="form-row">
+      <label for="intlMinutes">Total des minutes internationales</label>
+      <input type="text" id="intlMinutes" name="totalIntlMinutes" [(ngModel)]="model.totalIntlMinutes">
+    </div>
+    <div class="form-row">
+      <label for="intlCalls">Total des appels internationaux</label>
+      <input type="number" id="intlCalls" name="totalIntlCalls" [(ngModel)]="model.totalIntlCalls">
+    </div>
+    <div class="form-row">
+      <label for="intlCharge">Total des charges internationales</label>
+      <input type="text" id="intlCharge" name="totalIntlCharge" [(ngModel)]="model.totalIntlCharge">
+    </div>
+    <div class="form-row">
+      <label for="serviceCalls">Appels au service client</label>
+      <input type="number" id="serviceCalls" name="customerServiceCalls" [(ngModel)]="model.customerServiceCalls">
+    </div>
+  </div>
+  <div class="form-row button-row">
+    <button type="submit">Envoyer</button>
+  </div>
+</form>
+
+</div>
+<div *ngIf="prediction">
+  {{ prediction }}
+</div>
+
+<div *ngIf="errorMessage" style="color: red;">
+  {{ errorMessage }}
+</div>
+</body>

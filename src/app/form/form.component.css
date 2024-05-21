@@ -1,0 +1,122 @@
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Maintains spacing between the logo and navigation items */
+  align-items: center; /* Vertically centers the items within the navbar */
+  padding: 7px; /* Provides padding around the navbar content */
+  color: white; /* Sets text color for the entire navbar */
+  background-color: #8faadb; /* Dark background for better visibility of white text */
+  margin-top: -7px;
+  margin-bottom: 5px;
+  margin-left: -10px;
+}
+.navbar .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white; 
+}
+
+.navbar ul {
+    list-style: none; 
+    display: flex; 
+    margin-left: 20px; 
+    margin-right: 50px;
+    
+
+}
+
+.navbar ul li a {
+    text-decoration: none; 
+    color: white; 
+    padding: 0 1rem; 
+}
+
+.navbar ul li {
+  margin: 0 20px; 
+}
+
+
+.navbar .login-btn {
+    padding: 1rem 2rem; 
+    border: 1px solid white; 
+    background: none; 
+    color: white; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+    width: 200px;
+}
+
+.navbar .login-btn:hover {
+    background-color: white;
+    color: #333;
+}
+
+body {
+  margin: 0;
+  background-size: cover; 
+  background-position: center;  
+  background-repeat: no-repeat; 
+   /* background-color: rgb(167, 218, 252); */
+
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;  /* Ajouté pour gérer le wrap des colonnes si nécessaire */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;  /* Ajusté si nécessaire */
+
+  margin-top: 100px;
+  margin-left:15px}
+
+.form-column {
+  flex: 1 1 20%; /* Chaque colonne prend 20% de l'espace disponible */
+  max-width: 240px; /* Optionnel: définir une largeur maximale */
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+.button-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* Centre le contenu horizontalement */
+  align-items: center;  /* Centre le contenu verticalement (facultatif si le contenu a une seule ligne) */
+  margin-top: 20px;  /* Ajout d'espace au-dessus du bouton */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #8ab9eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style des labels dans le formulaire */
+label {
+  display: block; /* Chaque label occupe toute la largeur de la ligne, forçant l'input en dessous */
+  margin-bottom: 8px; /* Espacement entre le label et l'input associé */
+  font-size: 15px; /* Taille de police appropriée pour une bonne lisibilité */
+  color: #515355; /* Couleur sombre pour un bon contraste, facile à lire */
+  font-weight: bold; /* Rend le texte légèrement plus épais pour attirer l'attention */
+  padding-left: 3px; /* Petit décalage à gauche pour ne pas coller au bord du conteneur parent */
+}
+#statePieChart{
+  margin-top: 10px;
+}
